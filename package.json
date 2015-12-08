@@ -1,0 +1,31 @@
+{
+  "name": "meow-town",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelmcgrath/meow-town.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelmcgrath/meow-town/issues"
+  },
+  "homepage": "https://github.com/michaelmcgrath/meow-town",
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-better-body": "^1.0.17",
+    "koa-router": "^5.3.0",
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "co-mocha": "^1.1.2",
+    "co-supertest": "0.0.10",
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
+  }
+}

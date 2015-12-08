@@ -1,0 +1,13 @@
+{
+  "cats": [
+    {
+      "name": "cat1",
+      "img": "",
+      "description": "i am a cat",
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}
