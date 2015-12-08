@@ -5,9 +5,21 @@ const koaBody = require('koa-better-body')
 const app = koa()
 const router = require('koa-router')()
 
-module.exports = app
+app.use(koaBody({
+  extendTypes: {
+    // will parse application/x-javascript type body as a JSON string
+    json: ['application/x-javascript'],
+    multipart: ['multipart/mixed']
+  }
+}))
 
 router.post('/cats', function *() {
-  this.status = 400
-} )
+  if (this.request.body.fields){
+    this.status = 201
+  } else {
+    this.status = 400
+  }
+})
 app.use(router.routes())
+
+module.exports = app

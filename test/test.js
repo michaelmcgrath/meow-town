@@ -10,10 +10,19 @@ describe('API endpoints', () => {
   describe('POST /cats', () => {
     context('with valid data', () =>{
       it('creates a new cat')
-      it('returns 201')
+
+      it('returns 201', function *(){
+        yield request.post('/cats').send({
+          name: 'John',
+          img: '',
+          description: 'A great cat'
+        }).expect(201).end()
+      })
     })
+
     context('with invalid data', () =>{
       it('does not create a cat')
+
       it('returns 400', function *(){
         yield request.post('/cats').expect(400).end()
       })
@@ -26,7 +35,6 @@ describe('API endpoints', () => {
   describe('PATCH /cats/:id', () =>{
 
   })
-
 })
 
 
